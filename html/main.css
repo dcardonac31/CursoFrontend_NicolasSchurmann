@@ -1,11 +1,8 @@
 body{
-  background-color: #efefef;
+  background-color: #eee;
 }
 
-#parrafo{
-  color: #ff0000;
-}
-
-.etiqueta{
-  color: #00aa00;
+.caja{
+  margin: 8px;
+  background-color: #aaf;
 }

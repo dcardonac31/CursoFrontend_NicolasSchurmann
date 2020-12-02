@@ -5,5 +5,12 @@ body{
 p{
   color: #222fff;
   text-align: left;
+  text-indent: 40px;
+  line-height: 1.7;
+}
 
+a{
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 3px;
 }

@@ -3,15 +3,23 @@ body{
 }
 
 .caja{
-  margin: 8px;
-  padding: 8px;
-  border-style: solid;
-  border-width: 8px;
-  border-color: #faa;
-  border-left: 6px solid #afa;
-  background-color: #aaf;
-  border-radius: 8px;
-  height: 100px;
-  width: 100px;
-  color: #575;
+  margin: 1px;
+  padding: 5px;
+  border-style: solid #ffffff;
+  background-color: #ffffff;
+
+}
+
+.button-accept{
+  background-color:#108AF6 ;
+  border-style: hidden;
+  color: #ffffff;
+  padding: 5px;
+}
+
+.button-cancel{
+  background-color:#9F9F9F ;
+  border-style: hidden;
+  color: #ffffff;
+  padding: 5px;
 }

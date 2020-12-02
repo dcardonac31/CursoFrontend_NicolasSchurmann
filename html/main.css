@@ -3,23 +3,39 @@ body{
 }
 
 .caja{
-  margin: 1px;
-  padding: 5px;
-  border-style: solid #ffffff;
-  background-color: #ffffff;
-
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  border-radius: 2px;
+  border-top: solid 0px;
 }
 
-.button-accept{
-  background-color:#108AF6 ;
-  border-style: hidden;
-  color: #ffffff;
-  padding: 5px;
+.contenido{
+  padding: 10px;
 }
 
-.button-cancel{
-  background-color:#9F9F9F ;
-  border-style: hidden;
-  color: #ffffff;
+.header{
+  padding: 10px;
+  border-bottom: solid 1px #eee;
+}
+
+.footer{
+  padding: 10px;
+  border-top: solid 1px #eee;
+}
+
+.primario{
+  background-color:#0090ff;
+  border: 0px;
   padding: 5px;
+  color: #ffffff;
+}
+
+.secundario{
+  background-color:#aaa ;
+  border: 0px;
+  padding: 5px;
+  color: #ffffff;
+
 }

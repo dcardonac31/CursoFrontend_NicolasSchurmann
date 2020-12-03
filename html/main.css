@@ -2,30 +2,15 @@ body{
   background-color: #eee;
 }
 
-a{
-  color: hotpink;
-  background-color: #f00;
-  border: solid 1px #d00;
-  padding: 10px;
-  margin: 15px;
+ul {
+  list-style-type: none;
+  background-color: #fff;
+  border: solid 1px #ddd;
   border-radius: 4px;
+  padding-left: 0px;
 }
 
-a:link{
-  color: pink;
-  text-decoration: none;
+li {
+  border-bottom: solid 1px #ddd;
+  padding: 15px;
 }
-
-a:visited{
-  color: white;
-}
-
-a:hover{
-  color:white;
-  background-color: #f55;
-}
-
-a:active{
-  color: black;
-}
-

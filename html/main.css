@@ -2,14 +2,39 @@ body{
   background-color: #eee;
 }
 
-img{
-  float: right;
+ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
 }
 
-img:hover{
-  opacity: 0.9;
+li{
+  float: left;
 }
 
-div p{
-  color: #F00;
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+li:hover{
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.active{
+  background-color: #4CAF50;;
+}
+
+.content{
+  margin-top: 55px;
 }

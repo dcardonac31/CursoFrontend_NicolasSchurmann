@@ -2,8 +2,14 @@ body{
   background-color: #eee;
 }
 
-#over{
-  width: 100px;
-  height: 100px;
-  overflow-x: scroll;
+img{
+  float: right;
+}
+
+img:hover{
+  opacity: 0.9;
+}
+
+div p{
+  color: #F00;
 }

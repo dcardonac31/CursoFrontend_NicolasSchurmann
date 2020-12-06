@@ -6,7 +6,10 @@ body{
 .grid{
   display: grid;
   grid-template-rows: repeat(2, 50px);
-  grid-template-columns: repeat(3, 1fr) 15px;
+  grid-template-columns:30px repeat(3, 1fr) 15px;
+  /* grid-row-gap: 20px;
+  grid-column-gap:10px; */
+  grid-gap: 20px 10px;
 }
 
 .element{

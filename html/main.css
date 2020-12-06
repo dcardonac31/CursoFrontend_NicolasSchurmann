@@ -4,7 +4,8 @@ body{
 }
 
 .grid{
-  display: inline-grid;
+  display: grid;
+  grid-template-columns: 2rem 20% 1fr 2fr;
 }
 
 .element{

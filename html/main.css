@@ -16,3 +16,8 @@ body{
   background-color: red;
 }
 
+.header{
+  grid-column:1 / 6;
+  grid-row: 1 / 3;
+}
+

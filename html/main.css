@@ -3,37 +3,11 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
-.box{
-  background-color: white;
-  box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
-  margin: 10px 15px;
-  width: 200px;
-  padding: 10px 15px;
-  text-align: center;
-  transition: 0.3s;
+.grid{
+  display: inline-grid;
 }
 
-.red{
-  border-left: solid 2px red;
-}
-
-.red:hover{
-  transform: scale(1.05, 1.05);
-}
-
-.green{
-  border-left: solid 2px green;
-}
-
-.green:hover{
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
-}
-
-.blue{
-  border-left: solid 2px blue;
-}
-
-.blue:hover{
-  background-color: #eef;
+.element{
+  background-color: red;
 }
 

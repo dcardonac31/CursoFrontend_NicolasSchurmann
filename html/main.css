@@ -5,7 +5,8 @@ body{
 
 .grid{
   display: grid;
-  grid-template-columns: 2rem 20% 1fr 2fr;
+  grid-template-rows: minmax(100px, auto);
+  grid-template-columns: minmax(auto, 50%) 1fr 3em;
 }
 
 .element{

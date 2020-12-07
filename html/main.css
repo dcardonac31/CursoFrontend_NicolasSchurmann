@@ -5,8 +5,8 @@ body{
 
 .grid{
   display: grid;
-  grid-template-rows: [row-1-inicio] 50px [row-2-inicio] 50px [row-3-fin];
-  grid-template-columns:[col-1-inicio] 1fr [col-2-inicio] 1fr [col-3-inicio] 1fr [col-4-fin];
+  grid-template-rows: repeat(2, [row-inicio] 50px [row-fin]);
+  grid-template-columns: repeat(3, [col-inicio] 1fr [col-fin]);
   /* grid-row-gap: 20px;
   grid-column-gap:10px; */
   grid-gap: 20px 10px;
@@ -18,7 +18,7 @@ body{
 }
 
 .header{
-  grid-column: col-1-inicio / col-4-end;
-  grid-row: row-1-inicio / row-3-fin;
+  grid-column: col-inicio / col-fin 3;
+  grid-row: row-inicio / row-fin 3;
 }
 

@@ -25,11 +25,12 @@ body{
 
 .tercero{
   flex-grow: 2;
-
+  align-self: stretch;
 }
 .segundo{
   flex-grow: 1;
 }
+
 
 
 

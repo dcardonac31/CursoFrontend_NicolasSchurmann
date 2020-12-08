@@ -5,7 +5,6 @@ html{
 body{
   background-color: #eee;
   font-family: 'Roboto', sans-serif;
-  width: 200px;
 }
 
 .flex{
@@ -19,7 +18,9 @@ body{
 }
 
 .primero{
-  flex-grow: 1;
+  /* flex: 1;
+  flex-basis: 120px; */
+  flex: 1 120px;
 }
 
 .tercero{

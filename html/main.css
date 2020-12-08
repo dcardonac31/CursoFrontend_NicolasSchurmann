@@ -19,11 +19,15 @@ body{
 }
 
 .primero{
-  order: -1;
+  flex-grow: 1;
 }
 
 .tercero{
-  order: 1;
+  flex-grow: 2;
+
+}
+.segundo{
+  flex-grow: 1;
 }
 
 

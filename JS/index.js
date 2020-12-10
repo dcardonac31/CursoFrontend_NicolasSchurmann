@@ -9,4 +9,15 @@ console.log('Hola Mundo')
 // Undefined.
 // Object: objeto.
 
+// Definición de variables
+// var
+// let
+// const
+
+// var miPrimeraVariable = 'lala'
+
+let miPrimeraVariable = 'Mi primera variable!'
+console.log(miPrimeraVariable);
+
+
 

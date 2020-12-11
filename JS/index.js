@@ -16,29 +16,43 @@ console.log('Hola Mundo')
 
 // var miPrimeraVariable = 'lala'
 
-let miPrimeraVariable = 'Mi primera variable!'
-console.log(miPrimeraVariable);
+// let miPrimeraVariable = 'Mi primera variable!'
+// console.log(miPrimeraVariable);
 
 // mutabilidad
-miPrimeraVariable = 'Esto ha cambiado'
-console.log(miPrimeraVariable);
+// miPrimeraVariable = 'Esto ha cambiado'
+// console.log(miPrimeraVariable);
 
 // boolean
-let miBoolean = true
-let miOtroBool = false
+// let miBoolean = true
+// let miOtroBool = false
 
 // numeros
-let miNumero = 0
-let miNumero2 = 12
-let miNumero3 = -258
+// let miNumero = 0
+// let miNumero2 = 12
+// let miNumero3 = -258
 
-console.log(miNumero, miNumero2, miBoolean, miPrimeraVariable)
+// console.log(miNumero, miNumero2, miBoolean, miPrimeraVariable)
 
-let undef
-console.log(undef);
+// let undef
+// console.log(undef);
 
-let nulo = null
-console.log('nulo',12, nulo)
+// let nulo = null
+// console.log('nulo',12, nulo)
+
+// Objeto
+//un objeto es una agrupación de datos, estos datos hacen sentido entre si
+//objeto vacio
+// const miPrimerObjeto = {}
+
+//objeto agrupaciones de datos que hacen sentido entre si
+const miOBjeto = {
+  unNumero: 12,
+  unString: 'Esta cadena de caracteres',
+  unaCondicion: true,
+}
+
+console.log(miOBjeto.unString)
 
 
 

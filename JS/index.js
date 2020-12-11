@@ -16,8 +16,8 @@ console.log('Hola Mundo')
 
 // var miPrimeraVariable = 'lala'
 
-// let miPrimeraVariable = 'Mi primera variable!'
-// console.log(miPrimeraVariable);
+let miPrimeraVariable = 'Mi primera variable!'
+console.log(miPrimeraVariable);
 
 // mutabilidad
 // miPrimeraVariable = 'Esto ha cambiado'
@@ -54,6 +54,20 @@ const miOBjeto = {
 
 console.log(miOBjeto.unString)
 
+
+// Arreglos
+const arrVacio = []
+const arr = [1,2,'Hola','Mundo', miOBjeto]
+
+//console.log(arrVacio,arr)
+
+arrVacio.push(5)
+arrVacio.push(3)
+arrVacio.push(1)
+arrVacio.push('Hola')
+arrVacio.push(miPrimeraVariable)
+
+console.log(arrVacio)
 
 
 

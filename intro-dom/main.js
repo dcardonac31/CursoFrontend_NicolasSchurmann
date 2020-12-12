@@ -1,4 +1,4 @@
 window.onload = () =>{
   const parrafo = document.getElementById('text')
-  parrafo.innerText = 'Texto actualizado'
+  parrafo.innerHTML = '<li>elemento1</li><li>elemento2</li>'
 }

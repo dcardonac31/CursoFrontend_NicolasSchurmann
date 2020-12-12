@@ -101,6 +101,31 @@ num += 5
 num -= 5
 num *= 5
 num /= 2
-console.log(num);
+
+//console.log(num);
+
+
+//Operadores logicos
+
+//igualdad estricta
+const resultado1 = 5 === 6
+//igualdad no estricta, strings pueden ser iguales a numeros si el valor no es el mismo
+const resultado2 = 5 === '5'
+
+const resultado3 = 5 < 6
+const resultado4 = 5 < 5
+const resultado5 = 5 > 6
+const resultado6 = 5 > 4
+const resultado7 = 5 <= 5
+const resultado8 = 5 <= 6
+const resultado9 = 5 >= 5
+const resultado10 = 5 >= 6
+
+//desigualdad estricta
+const resultado11 = 5 !== 6
+//desigualdad no estricta, strings pueden ser desiguales a numeros si el valor no es el mismo
+const resultado12 = 5 != '5'
+
+console.log(resultado11, resultado12)
 
 

@@ -126,6 +126,21 @@ const resultado11 = 5 !== 6
 //desigualdad no estricta, strings pueden ser desiguales a numeros si el valor no es el mismo
 const resultado12 = 5 != '5'
 
-console.log(resultado11, resultado12)
+//console.log(resultado11, resultado12)
+
+//or ||, and &&, not !
+
+const resultadoOr = true || false
+//console.log(resultadoOr);
+
+const resultadoAnd = true && true && true && true && true && false
+//console.log(resultadoAnd);
+
+const resultadoNot = !false
+console.log(resultadoNot);
+
+
+
+
 
 

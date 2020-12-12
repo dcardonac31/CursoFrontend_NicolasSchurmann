@@ -1,0 +1,1 @@
+console.log('intro a DOM desde main.js')

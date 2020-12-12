@@ -239,6 +239,10 @@ const otraFAF = (a, b) =>{
 }
 // const r = miFatArrowFunction(1,2)
 const r = otraFAF(1,2)
-console.log(r)
+//console.log(r)
+
+sumar(2, 3, function (r){
+  console.log('soy una funcion anonima y mi resultado es:',r)
+})
 
 

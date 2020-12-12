@@ -13,6 +13,10 @@ window.onload = () =>{
    todoList.innerHTML = todosTemplate.join('');
    //document.querySelectorAll('#todo-list')
    const elementos = document.querySelectorAll('#todo-list li')
-   elementos.forEach(x => console.log(x))
+   elementos.forEach((elemento,i) => {
+    elemento.addEventListener('click',() =>{
+      console.log(elemento, i);
+    })
+   }) 
  }
 }

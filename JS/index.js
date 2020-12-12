@@ -1,4 +1,4 @@
-console.log('Hola Mundo')
+//console.log('Hola Mundo')
 
 //-- Tipos de datos en JS --
 // String: Cadena de caracteres: 'hola' 'hola mundo' 'a'
@@ -17,7 +17,7 @@ console.log('Hola Mundo')
 // var miPrimeraVariable = 'lala'
 
 let miPrimeraVariable = 'Mi primera variable!'
-console.log(miPrimeraVariable);
+//console.log(miPrimeraVariable);
 
 // mutabilidad
 // miPrimeraVariable = 'Esto ha cambiado'
@@ -52,7 +52,7 @@ const miOBjeto = {
   unaCondicion: true,
 }
 
-console.log(miOBjeto.unString)
+//console.log(miOBjeto.unString)
 
 
 // Arreglos
@@ -67,7 +67,40 @@ arrVacio.push(1)
 arrVacio.push('Hola')
 arrVacio.push(miPrimeraVariable)
 
-console.log(arrVacio)
+//console.log(arrVacio)
 
+
+// Operadores matematicos
+
+const suma = 1 + 2
+const restar = 1 - 2
+const multiplicar = 2 * 3
+const division = 9 / 3
+
+//console.log(suma,restar,multiplicar,division)
+
+const modulo = 10 % 3
+//console.log(modulo);
+
+//const num = 5
+// const vs let
+let num = 5
+// num++
+// num++
+// num++
+// num++
+// num++
+
+// num--
+// num--
+// num--
+// num--
+// num--
+
+num += 5
+num -= 5
+num *= 5
+num /= 2
+console.log(num);
 
 

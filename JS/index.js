@@ -185,9 +185,14 @@ switch (y) {
 
 //for
 
-for (let i = 0; i < 10; i++) {
-  console.log(i)
-}
+// for (let i = 0; i < 10; i++) {
+//   console.log(i)
+// }
 
+const numeros = [1,2,'Hola',4,5]
+
+for (let i = 0; i < numeros.length; i++) {
+  console.log('index ['+i+']: '+numeros[i]);
+}
 
 

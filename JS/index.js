@@ -72,10 +72,10 @@ arrVacio.push(miPrimeraVariable)
 
 // Operadores matematicos
 
-const suma = 1 + 2
-const restar = 1 - 2
-const multiplicar = 2 * 3
-const division = 9 / 3
+// const suma = 1 + 2
+// const restar = 1 - 2
+// const multiplicar = 2 * 3
+// const division = 9 / 3
 
 //console.log(suma,restar,multiplicar,division)
 
@@ -204,7 +204,17 @@ function iterar(arg1) {
 const numeros = [1, 2, 'Hola', 4, 5]
 const nombres = ['Pedro', 'Juan', 'Felipe', 'Chanchito Feliz', 'Chanchito triste']
 
-iterar(numeros)
-iterar(nombres)
+//iterar(numeros)
+//iterar(nombres)
+
+function suma(a, b) {
+  return a + b;
+}
+
+const resultadoSuma1 = suma(1,2)
+const resultadoSuma2 = suma(5,6)
+const resultadoSuma3 = suma(resultadoSuma1,resultadoSuma2)
+
+console.log('resultado', resultadoSuma3)
 
 

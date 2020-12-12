@@ -137,7 +137,18 @@ const resultadoAnd = true && true && true && true && true && false
 //console.log(resultadoAnd);
 
 const resultadoNot = !false
-console.log(resultadoNot);
+//console.log(resultadoNot);
+
+
+
+
+// Control de flujo
+const edad = 5
+if (edad > 5 && edad < 18) {
+  console.log('El niño puede jugar ☻')
+} else {
+  console.log('El niño no puede jugar :(')
+}
 
 
 

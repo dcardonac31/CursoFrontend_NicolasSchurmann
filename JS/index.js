@@ -57,7 +57,7 @@ const miOBjeto = {
 
 // Arreglos
 const arrVacio = []
-const arr = [1,2,'Hola','Mundo', miOBjeto]
+const arr = [1, 2, 'Hola', 'Mundo', miOBjeto]
 
 //console.log(arrVacio,arr)
 
@@ -189,10 +189,22 @@ switch (y) {
 //   console.log(i)
 // }
 
-const numeros = [1,2,'Hola',4,5]
+// const numeros = [1,2,'Hola',4,5]
 
-for (let i = 0; i < numeros.length; i++) {
-  console.log('index ['+i+']: '+numeros[i]);
+// for (let i = 0; i < numeros.length; i++) {
+//   console.log('index ['+i+']: '+numeros[i]);
+// }
+
+function iterar(arg1) {
+  for (let i = 0; i < numeros.length; i++) {
+    console.log(arg1[i]);
+  }
 }
+
+const numeros = [1, 2, 'Hola', 4, 5]
+const nombres = ['Pedro', 'Juan', 'Felipe', 'Chanchito Feliz', 'Chanchito triste']
+
+iterar(numeros)
+iterar(nombres)
 
 

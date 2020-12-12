@@ -8,12 +8,14 @@ body{
 }
 
 .flex{
-  display: flex;
+  /* display: flex;
   flex-flow: row wrap ;
-  height: 200px;
+  height: 200px; */
+  margin: 10px 11px 12px  
+
 }
 
-.red{
+/* .red{
   background-color: red;
 }
 
@@ -29,7 +31,7 @@ body{
 }
 .segundo{
   flex-grow: 1;
-}
+} */
 
 
 

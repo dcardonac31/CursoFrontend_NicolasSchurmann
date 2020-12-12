@@ -105,7 +105,7 @@ num /= 2
 //console.log(num);
 
 
-//Operadores logicos
+//Operadores de comparacion
 
 //igualdad estricta
 const resultado1 = 5 === 6

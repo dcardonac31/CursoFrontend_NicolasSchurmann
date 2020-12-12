@@ -155,12 +155,32 @@ if (edad > 5 && edad < 18) {
 // control de flujo while
 let x = true
 while (x) {
-  console.log(x);
+  //console.log(x);
   x = false
 }
 
-console.log('Terminando el loop')
+//console.log('Terminando el loop')
 
+
+
+// control de flujo switch
+let y = 3
+switch (y) {
+  case 1: {
+    console.log('yo soy el caso 1')
+    break;
+  }
+  case 2: {
+    console.log('chanchito feliz ☻')
+    break;
+  }
+  case 3:
+    console.log('chanchito triste :(')
+    break;
+  default:
+    console.log('no hay chanchitos! :(')
+    break;
+}
 
 
 

@@ -226,6 +226,19 @@ function callback(result){
   console.log('resultado', result)
 }
 
-sumar(2,3, callback)
+//sumar(2,3, callback)
+
+
+
+
+// fat arrow functions
+
+const miFatArrowFunction = (a, b) => a + b
+const otraFAF = (a, b) =>{
+  return a + b
+}
+// const r = miFatArrowFunction(1,2)
+const r = otraFAF(1,2)
+console.log(r)
 
 

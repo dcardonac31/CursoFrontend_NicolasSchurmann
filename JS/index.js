@@ -143,12 +143,24 @@ const resultadoNot = !false
 
 
 // Control de flujo
+
+// control de flujo if
 const edad = 5
 if (edad > 5 && edad < 18) {
-  console.log('El niño puede jugar ☻')
+  //console.log('El niño puede jugar ☻')
 } else {
-  console.log('El niño no puede jugar :(')
+  //console.log('El niño no puede jugar :(')
 }
+
+// control de flujo while
+let x = true
+while (x) {
+  console.log(x);
+  x = false
+}
+
+console.log('Terminando el loop')
+
 
 
 

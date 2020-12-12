@@ -11,5 +11,8 @@ window.onload = () =>{
    const todoList = document.getElementById('todo-list')
    const todosTemplate = todos.map(t => '<li>' + t + '</li>');
    todoList.innerHTML = todosTemplate.join('');
+   //document.querySelectorAll('#todo-list')
+   const elementos = document.querySelectorAll('#todo-list li')
+   elementos.forEach(x => console.log(x))
  }
 }

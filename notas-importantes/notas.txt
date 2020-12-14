@@ -1,3 +1,4 @@
+---------------------------
 Api-REST
 ---------------------------
 
@@ -30,3 +31,47 @@ DELETE                        /users/:id                   204
 
 Algunas API utilizan PUT y PATCH para la misma función, que es actualizar parcialmente
 un recurso.
+
+
+
+---------------------------
+Server less
+---------------------------
+Clientes <-> [Servidores] <-> {balanceador de carga} <-> [Servidores auxiliares]
+
+- Una o mas personas controlan y monitorean toda esta operación, este es un modelo antiguo.
+
+
+En server less o FaaS (Function as a service) se encargan de toda esta operación
+
+
+          {/users}------> {BD[Js]}
+             ^
+             |
+  o          |
+ -|-  >>>> [Js]
+  /\
+
+
+  
+          {/users}------> {BD[Js]}
+                                      -No se administan servidores
+                                      -Es mas barato, se paga por uso
+  o          
+ -|-  >>>> [Js]
+  /\
+
+
+  Ejecución en frio
+  [Js] <->                   Solo tiene en memoria los archivos ejecutados recientemente
+  [Js] <->                   El resto de archivos son enviados al disco del servidor
+  [Js] <->     {/users}
+  [Js] <->
+  [Js] <->
+
+    Ejecución en caliente
+  [Js] <->                   Solo tiene en memoria los archivos ejecutados recientemente
+  [Js] <->                   Todos los archivos deben estar en la misma ruta
+  [Js] <->     {/users}
+  [Js] <->
+  [Js] <->

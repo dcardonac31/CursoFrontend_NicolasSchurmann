@@ -104,3 +104,10 @@ Pedidos
 -id
 -meal_id
 -user_id
+
+
+-------------------
+BD NoSQL: MongoDB
+-------------------
+mongodb+srv://almuerzimaster:<password>@cluster0.fnkeb.mongodb.net/<dbname>?retryWrites=true&w=majority
+https://cloud.mongodb.com/

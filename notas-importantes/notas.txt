@@ -1,0 +1,32 @@
+Api-REST
+---------------------------
+
+
+              {       } 
+              {       } 
+cliente <->   {  Api  } <->  [base de datos]
+              {       } 
+              {       } 
+
+Se utilizan verbos HTTP para la comunicación
+
+- GET: Se utiliza para traer información, listar información
+- POST: Crear un recurso
+- PUT: Reemplazar un recurso
+- PATCH: Actualizar un recurso o reemplazar parcialmente
+- DELETE: Eliminar un recurso
+
+Para conectar a la API, hay que indicar un recurso, por lo general entidades en la 
+base de datos:
+-Usuarios, pedidos, productos, tweets, etc...
+
+
+VERBO                         LLAMADO RECURSO (RUTA)      CODIGO DEVOLUCION
+GET                           /users    users/:id          200
+POST                          /users                       201
+*PUT                           /users/:id                  204
+*PATCH                         /users/:id                  204
+DELETE                        /users/:id                   204
+
+Algunas API utilizan PUT y PATCH para la misma función, que es actualizar parcialmente
+un recurso.

@@ -110,4 +110,19 @@ Pedidos
 BD NoSQL: MongoDB
 -------------------
 mongodb+srv://almuerzimaster:<password>@cluster0.fnkeb.mongodb.net/<dbname>?retryWrites=true&w=majority
+mongodb+srv://almuerzimaster:<colombia2020>@cluster0.fnkeb.mongodb.net/<almuerzi>?retryWrites=true&w=majority
+
 https://cloud.mongodb.com/
+
+-------------------
+Instalando dependencias y conectandose a mongo atlas
+-------------------
+npm i -S express mongoose body-parser cors
+
+- mongoose: libreria para conectar a mongodb, es una capa encima del driver de mongodb
+
+- body-parser: transforma las peticiones al servidor en JSON
+
+- cors: libreria que permite habilitar la petición desde urls distintas, con esto se evita un error 
+cuando se trabaja desde local, que dice que no esta habilitado para trabajar desde diferentes
+dominios.

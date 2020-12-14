@@ -78,3 +78,29 @@ En server less o FaaS (Function as a service) se encargan de toda esta operació
 
   Proveedor FaaS gratuito
   https://vercel.com/
+
+
+---------------------------
+¿Que aplicación vamos a contruir?
+---------------------------
+
+                 Almuerzi
+  o          
+ -|-                  comida                 o
+  /\                                        -|- chef
+  o                   carro                  /\ 
+ -|-                  transportador
+  /\  
+
+
+
+  Platos            
+  
+  - id
+  -name
+  - descr
+
+Pedidos
+-id
+-meal_id
+-user_id

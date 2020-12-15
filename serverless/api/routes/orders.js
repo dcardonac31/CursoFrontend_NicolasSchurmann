@@ -1,7 +1,7 @@
 const express = require('express')
 const Orders = require('../models/Orders')
 
-const router = app.Router()
+const router = express.Router()
 
 router.get('/',(req, res) =>{
   Orders.find()

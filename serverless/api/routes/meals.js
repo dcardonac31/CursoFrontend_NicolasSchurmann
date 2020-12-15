@@ -1,7 +1,7 @@
 const express = require('express')
 const Meals = require('../models/Meals')
 
-const router = app.Router()
+const router = express.Router()
 
 router.get('/',(req, res) =>{
   Meals.find()

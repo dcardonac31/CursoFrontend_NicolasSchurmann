@@ -9,6 +9,8 @@ const renderItem = (item) => {
   const element = stringToHTML(`<li data-id="${item._id}">${item.name}</li>`)
   
   element.addEventListener('click', () => {
+    const mealsList = document.getElementById('meals-list')
+    Array.from(mealsList.children).forEach(x => x.classList.remove('selected'))
     element.classList.add('selected')
   })
 

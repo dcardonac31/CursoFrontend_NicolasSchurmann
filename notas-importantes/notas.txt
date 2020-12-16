@@ -308,4 +308,22 @@ npm i -S express mongoose body-parser cors
 cuando se trabaja desde local, que dice que no esta habilitado para trabajar desde diferentes
 dominios.
 
+-------------------
+fetch: todos los datos que se pueden enviar
+-------------------
+window.onload = () => {
+  fetch('https://serverless.dcardonac31.vercel.app/api/meals', {
+    method: 'GET', //POST , PUT, DELETE
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    redirect: 'follow',
+    body: JSON.stringify({user: 'lala', password: 'chanchito' })
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+}
 

@@ -17,6 +17,7 @@ window.onload = () => {
       const mealsList = document.getElementById('meals-list')
       const submit = document.getElementById('submit')
       const listItems = data.map(renderItem)
+      mealsList.removeChild(mealsList.firstElementChild)
       listItems.forEach(element => mealsList.appendChild(element));
       submit.removeAttribute('disabled')
     })

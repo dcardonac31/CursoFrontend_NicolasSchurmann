@@ -7,6 +7,11 @@ const stringToHTML = (s) => {
 
 const renderItem = (item) => {
   const element = stringToHTML(`<li data-id="${item._id}">${item.name}</li>`)
+  
+  element.addEventListener('click', () => {
+    element.classList.add('selected')
+  })
+
   return element
 }
 

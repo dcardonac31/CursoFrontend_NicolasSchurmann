@@ -1,5 +1,13 @@
+const stringToHTML = (s) => {
+  const parser = new DOMParser()
+  const doc = parser.parseFromString(s, 'text/html')
+  return doc.body.firstChild
+  //console.log(doc);
+}
+
 const renderItem = (item) => {
-  return `<li data-id="${item._id}">${item.name}</li>`
+  const element = stringToHTML(`<li data-id="${item._id}">${item.name}</li>`)
+  return element
 }
 
 window.onload = () => {
@@ -8,8 +16,8 @@ window.onload = () => {
     .then(data => {
       const mealsList = document.getElementById('meals-list')
       const submit = document.getElementById('submit')
-      const template = data.map(renderItem).join('')
-      mealsList.innerHTML = template
+      const listItems = data.map(renderItem)
+      listItems.forEach(element => mealsList.appendChild(element));
       submit.removeAttribute('disabled')
     })
 }

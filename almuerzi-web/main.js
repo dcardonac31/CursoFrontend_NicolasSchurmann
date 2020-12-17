@@ -32,10 +32,21 @@ window.onload = () => {
 
     const order = {
       meal_id: mealsIdValue,
-      user_id: 'chanchito feliz',
+      user_id: 'chanchito triste',
     }
 
+
+    fetch('https://serverless.dcardonac31.vercel.app/api/orders', {
+    method: 'POST',  
+    headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(order)
+    }).then(x => console.log(x))
   }
+
+
+
   fetch('https://serverless.dcardonac31.vercel.app/api/meals')
     .then(response => response.json())
     .then(data => {

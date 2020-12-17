@@ -1,3 +1,5 @@
+let mealsState = []
+
 const stringToHTML = (s) => {
   const parser = new DOMParser()
   const doc = parser.parseFromString(s, 'text/html')
@@ -30,6 +32,8 @@ window.onload = () => {
   const orderForm = document.getElementById('order')
   orderForm.onsubmit = (e) => {
     e.preventDefault()
+    const submit = document.getElementById('submit')
+    submit.setAttribute('disabled', true)
     const mealId = document.getElementById('meals-id')
     const mealsIdValue = mealId.value
     if (!mealsIdValue) {
@@ -49,7 +53,13 @@ window.onload = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(order)
-    }).then(x => console.log(x))
+    }).then(x => x.json())
+    .then(respuesta => {
+      const renderedOrder = renderOrder(respuesta, mealsState)
+      submit.removeAttribute('disabled')
+      const ordersList = document.getElementById('orders-list')
+      ordersList.appendChild(renderedOrder)
+    })
   }
 
 
@@ -57,6 +67,7 @@ window.onload = () => {
   fetch('https://serverless.dcardonac31.vercel.app/api/meals')
     .then(response => response.json())
     .then(data => {
+      mealsState = data
       const mealsList = document.getElementById('meals-list')
       const submit = document.getElementById('submit')
       const listItems = data.map(renderItem)

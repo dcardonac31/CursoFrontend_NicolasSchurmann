@@ -19,6 +19,13 @@ const renderItem = (item) => {
   return element
 }
 
+const renderOrder = (order, meals) => {
+  const meal = meals.find(meal => meal._id === order.meal_id)
+  const element = stringToHTML(`<li data-id="${order._id}">${meal.name} ${order.user_id}</li>`)
+
+  return element
+}
+
 window.onload = () => {
   const orderForm = document.getElementById('order')
   orderForm.onsubmit = (e) => {
@@ -56,5 +63,13 @@ window.onload = () => {
       mealsList.removeChild(mealsList.firstElementChild)
       listItems.forEach(element => mealsList.appendChild(element));
       submit.removeAttribute('disabled')
+      fetch('https://serverless.dcardonac31.vercel.app/api/orders')
+      .then(response => response.json())
+      .then(ordersData => {
+        const ordersList = document.getElementById('orders-list')
+        const listOrders = ordersData.map(orderData => renderOrder(orderData, data))
+        ordersList.removeChild(ordersList.firstElementChild)
+        listOrders.forEach(element => ordersList.appendChild(element))
+      })
     })
 }

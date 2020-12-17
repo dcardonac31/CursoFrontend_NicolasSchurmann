@@ -20,6 +20,22 @@ const renderItem = (item) => {
 }
 
 window.onload = () => {
+  const orderForm = document.getElementById('order')
+  orderForm.onsubmit = (e) => {
+    e.preventDefault()
+    const mealId = document.getElementById('meals-id')
+    const mealsIdValue = mealId.value
+    if (!mealsIdValue) {
+      alert('Debe seleccionar un plato')
+      return
+    }
+
+    const order = {
+      meal_id: mealsIdValue,
+      user_id: 'chanchito feliz',
+    }
+
+  }
   fetch('https://serverless.dcardonac31.vercel.app/api/meals')
     .then(response => response.json())
     .then(data => {

@@ -30,7 +30,21 @@ router.post('/register', (req, res) =>{
 })
 
 router.post('/login', (req, res) =>{
-  res.send('soy login')
+  const { email, password } = req.body
+  Users.findOne({ email }).exec()
+    .then(user => {
+      if (!user) {
+        return res.send('Usuario y/o contraseña incorrecta')
+      }
+      crypto.pbkdf2(password, user.salt, 10000, 64, 'sha1', (err, key) => {
+        const encryptedPassword = key.toString('base64')
+        if (user.password === encryptedPassword) {
+          const token = signToken(user._id)
+          return res.send({ token })
+        }
+        return res.send('usuario y/o contraseña incorrecta')
+      })
+    })
 })
 
 module.exports = router

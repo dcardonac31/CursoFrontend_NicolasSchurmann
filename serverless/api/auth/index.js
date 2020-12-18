@@ -16,10 +16,11 @@ const isAuthenticated = (req, res, next) => {
   })
 }
 
-const hasRole = role => (req, res, next) => {
-  if(req.user.role === role) {
+const hasRoles = roles => (req, res, next) => {
+  if(roles.indexOf(req.user.role)) {
     return next()
   }
+  
   res.sendStatus(403)
 }
 

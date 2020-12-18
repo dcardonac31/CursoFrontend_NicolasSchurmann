@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken')
 const Users = require('../models/Users')
 
-module.exports = (req, res, next) => {
+const isAuthenticated = (req, res, next) => {
   const token = req.headers.authorization
   if(!token) {
     return res.sendStatus(403)
@@ -14,4 +14,16 @@ module.exports = (req, res, next) => {
         next()
       })
   })
+}
+
+const hasRole = role => (req, res, next) => {
+  if(req.user.role === role) {
+    return next()
+  }
+  res.sendStatus(403)
+}
+
+module.exports = {
+  isAuthenticated,
+  hasRole
 }

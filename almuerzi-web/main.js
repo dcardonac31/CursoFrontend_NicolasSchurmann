@@ -1,13 +1,12 @@
-const e = require("express")
-
 let mealsState = []
 let ruta = 'login' //login, register, orders
 
 const stringToHTML = (s) => {
   const parser = new DOMParser()
   const doc = parser.parseFromString(s, 'text/html')
+
   return doc.body.firstChild
-  //console.log(doc);
+
 }
 
 const renderItem = (item) => {
@@ -49,7 +48,6 @@ const inicializaFormulario = () => {
       user_id: 'chanchito triste',
     }
 
-
     fetch('https://serverless.dcardonac31.vercel.app/api/orders', {
       method: 'POST',
       headers: {
@@ -89,9 +87,15 @@ const inicializaDatos = () => {
     })
 }
 
+const renderApp = () => {
+  const token = localStorage.getItem('token')
+  console.log('token', token)
+}
+
 window.onload = () => {
+  renderApp()
   const loginForm = document.getElementById('login-form')
-  loginForm.onsubmit = () => {
+  loginForm.onsubmit = (e) => {
     e.preventDefault()
     const email = document.getElementById('email').value
     const password = document.getElementById('password').value
@@ -102,7 +106,11 @@ window.onload = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ email, password })
-    })
+    }).then(x => x.json())
+      .then(respuesta => {
+        localStorage.setItem('token', respuesta.token)
+        ruta = 'orders'
+      })
   }
 
   // inicializaFormulario()

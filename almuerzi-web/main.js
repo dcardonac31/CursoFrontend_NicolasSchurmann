@@ -1,3 +1,5 @@
+const e = require("express")
+
 let mealsState = []
 let ruta = 'login' //login, register, orders
 
@@ -10,7 +12,7 @@ const stringToHTML = (s) => {
 
 const renderItem = (item) => {
   const element = stringToHTML(`<li data-id="${item._id}">${item.name}</li>`)
-  
+
   element.addEventListener('click', () => {
     const mealsList = document.getElementById('meals-list')
     Array.from(mealsList.children).forEach(x => x.classList.remove('selected'))
@@ -49,52 +51,60 @@ const inicializaFormulario = () => {
 
 
     fetch('https://serverless.dcardonac31.vercel.app/api/orders', {
-    method: 'POST',  
-    headers: {
+      method: 'POST',
+      headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(order)
     }).then(x => x.json())
-    .then(respuesta => {
-      const renderedOrder = renderOrder(respuesta, mealsState)
-      submit.removeAttribute('disabled')
-      const ordersList = document.getElementById('orders-list')
-      ordersList.appendChild(renderedOrder)
-      submit.removeAttribute('disabled')
-    })
+      .then(respuesta => {
+        const renderedOrder = renderOrder(respuesta, mealsState)
+        submit.removeAttribute('disabled')
+        const ordersList = document.getElementById('orders-list')
+        ordersList.appendChild(renderedOrder)
+        submit.removeAttribute('disabled')
+      })
   }
 }
 
 const inicializaDatos = () => {
   fetch('https://serverless.dcardonac31.vercel.app/api/meals')
-  .then(response => response.json())
-  .then(data => {
-    mealsState = data
-    const mealsList = document.getElementById('meals-list')
-    const submit = document.getElementById('submit')
-    const listItems = data.map(renderItem)
-    mealsList.removeChild(mealsList.firstElementChild)
-    listItems.forEach(element => mealsList.appendChild(element));
-    submit.removeAttribute('disabled')
-    fetch('https://serverless.dcardonac31.vercel.app/api/orders')
     .then(response => response.json())
-    .then(ordersData => {
-      const ordersList = document.getElementById('orders-list')
-      const listOrders = ordersData.map(orderData => renderOrder(orderData, data))
-      ordersList.removeChild(ordersList.firstElementChild)
-      listOrders.forEach(element => ordersList.appendChild(element))
+    .then(data => {
+      mealsState = data
+      const mealsList = document.getElementById('meals-list')
+      const submit = document.getElementById('submit')
+      const listItems = data.map(renderItem)
+      mealsList.removeChild(mealsList.firstElementChild)
+      listItems.forEach(element => mealsList.appendChild(element));
+      submit.removeAttribute('disabled')
+      fetch('https://serverless.dcardonac31.vercel.app/api/orders')
+        .then(response => response.json())
+        .then(ordersData => {
+          const ordersList = document.getElementById('orders-list')
+          const listOrders = ordersData.map(orderData => renderOrder(orderData, data))
+          ordersList.removeChild(ordersList.firstElementChild)
+          listOrders.forEach(element => ordersList.appendChild(element))
+        })
     })
-  })
 }
 
 window.onload = () => {
-  fetch('https://serverless.dcardonac31.vercel.app/api/auth/register', {
-    method: 'POST',  
-    headers: {
+  const loginForm = document.getElementById('login-form')
+  loginForm.onsubmit = () => {
+    e.preventDefault()
+    const email = document.getElementById('email').value
+    const password = document.getElementById('password').value
+
+    fetch('https://serverless.dcardonac31.vercel.app/api/auth/login', {
+      method: 'POST',
+      headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email: 'chanchito@feliz.com', password: '123456' })
-  })
+      body: JSON.stringify({ email, password })
+    })
+  }
+
   // inicializaFormulario()
   // inicializaDatos()
 }

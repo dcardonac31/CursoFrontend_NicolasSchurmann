@@ -97,14 +97,14 @@ const renderApp = () => {
 
 const renderOrders = () => {
   const ordersView = document.getElementById('orders-view')
-  document.getElementsByTagName('body')[0].innerHTML = ordersView.innerHTML
+  document.getElementById('app').innerHTML = ordersView.innerHTML
   inicializaFormulario()
   inicializaDatos()
 }
 
 const renderLogin = () => {
   const loginTemplate = document.getElementById('login-template')
-  document.getElementsByTagName('body')[0].innerHTML = loginTemplate.innerHTML
+  document.getElementById('app').innerHTML = loginTemplate.innerHTML
 
   const loginForm = document.getElementById('login-form')
   loginForm.onsubmit = (e) => {

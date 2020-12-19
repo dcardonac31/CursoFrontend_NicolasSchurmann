@@ -45,7 +45,7 @@ ul {
 }
 
 .form-main {
-  max-width: 400px;
+  max-width: 300px;
   margin: 0 auto;
   margin-top: 100px;
   padding: 15px;
@@ -64,4 +64,17 @@ form input {
   border: solid 0px;
   border-radius: 4px;
   color: #555;
+}
+
+.btn {
+  border: solid 0px;
+  padding: 10px 15px;
+  background-color: #2280cc;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.block {
+  width: calc(100% - 4px);
 }

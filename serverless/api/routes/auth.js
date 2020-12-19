@@ -2,6 +2,7 @@ const express = require('express')
 const crypto = require('crypto')
 const jwt = require('jsonwebtoken')
 const Users = require('../models/Users')
+const { isAuthenticated } = require('../auth')
 
 const router = express.Router()
 
@@ -50,6 +51,10 @@ router.post('/login', (req, res) =>{
         return res.send('usuario y/o contraseña incorrecta')
       })
     })
+})
+
+router.get('/me', isAuthenticated, (req, res) => {
+  res.send(req.user)
 })
 
 module.exports = router

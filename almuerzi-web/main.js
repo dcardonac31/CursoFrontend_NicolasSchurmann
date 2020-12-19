@@ -88,6 +88,13 @@ const inicializaDatos = () => {
 }
 
 window.onload = () => {
+  fetch('https://serverless.dcardonac31.vercel.app/api/auth/register', {
+    method: 'POST',  
+    headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email: 'chanchito@feliz.com', password: '123456' })
+  })
   // inicializaFormulario()
   // inicializaDatos()
 }

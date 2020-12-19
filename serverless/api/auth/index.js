@@ -17,14 +17,14 @@ const isAuthenticated = (req, res, next) => {
 }
 
 const hasRoles = roles => (req, res, next) => {
-  if(roles.indexOf(req.user.role)) {
+  if(roles.indexOf(req.user.role) > -1) {
     return next()
   }
-  
+
   res.sendStatus(403)
 }
 
 module.exports = {
   isAuthenticated,
-  hasRole
+  hasRoles,
 }

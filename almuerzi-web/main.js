@@ -28,7 +28,7 @@ const renderOrder = (order, meals) => {
   return element
 }
 
-window.onload = () => {
+const inicializaFormulario = () => {
   const orderForm = document.getElementById('order')
   orderForm.onsubmit = (e) => {
     e.preventDefault()
@@ -59,28 +59,34 @@ window.onload = () => {
       submit.removeAttribute('disabled')
       const ordersList = document.getElementById('orders-list')
       ordersList.appendChild(renderedOrder)
+      submit.removeAttribute('disabled')
     })
   }
+}
 
-
-
+const inicializaDatos = () => {
   fetch('https://serverless.dcardonac31.vercel.app/api/meals')
+  .then(response => response.json())
+  .then(data => {
+    mealsState = data
+    const mealsList = document.getElementById('meals-list')
+    const submit = document.getElementById('submit')
+    const listItems = data.map(renderItem)
+    mealsList.removeChild(mealsList.firstElementChild)
+    listItems.forEach(element => mealsList.appendChild(element));
+    submit.removeAttribute('disabled')
+    fetch('https://serverless.dcardonac31.vercel.app/api/orders')
     .then(response => response.json())
-    .then(data => {
-      mealsState = data
-      const mealsList = document.getElementById('meals-list')
-      const submit = document.getElementById('submit')
-      const listItems = data.map(renderItem)
-      mealsList.removeChild(mealsList.firstElementChild)
-      listItems.forEach(element => mealsList.appendChild(element));
-      submit.removeAttribute('disabled')
-      fetch('https://serverless.dcardonac31.vercel.app/api/orders')
-      .then(response => response.json())
-      .then(ordersData => {
-        const ordersList = document.getElementById('orders-list')
-        const listOrders = ordersData.map(orderData => renderOrder(orderData, data))
-        ordersList.removeChild(ordersList.firstElementChild)
-        listOrders.forEach(element => ordersList.appendChild(element))
-      })
+    .then(ordersData => {
+      const ordersList = document.getElementById('orders-list')
+      const listOrders = ordersData.map(orderData => renderOrder(orderData, data))
+      ordersList.removeChild(ordersList.firstElementChild)
+      listOrders.forEach(element => ordersList.appendChild(element))
     })
+  })
+}
+
+window.onload = () => {
+  inicializaFormulario()
+  inicializaDatos()
 }

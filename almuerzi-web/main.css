@@ -48,9 +48,20 @@ ul {
   max-width: 400px;
   margin: 0 auto;
   margin-top: 100px;
+  padding: 15px;
 }
 
 .login-form {
   margin-bottom: 5px;
   font-size: 14px;
+}
+
+form input {
+  width: calc(100% - 10px);
+  height: 24px;
+  padding-left: 5px;
+  background-color: #dedede;
+  border: solid 0px;
+  border-radius: 4px;
+  color: #555;
 }

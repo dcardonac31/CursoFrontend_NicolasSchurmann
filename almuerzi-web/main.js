@@ -89,11 +89,16 @@ const inicializaDatos = () => {
 
 const renderApp = () => {
   const token = localStorage.getItem('token')
-  console.log('token', token)
+  if (token) {
+    const ordersView = document.getElementById('orders-view')
+    document.getElementsByTagName('body')[0].innerHTML = ordersView.innerHTML
+  }
 }
 
-window.onload = () => {
-  renderApp()
+const renderLogin = () => {
+  const loginTemplate = document.getElementById('login-template')
+  document.getElementsByTagName('body')[0].innerHTML = loginTemplate.innerHTML
+  
   const loginForm = document.getElementById('login-form')
   loginForm.onsubmit = (e) => {
     e.preventDefault()
@@ -112,7 +117,10 @@ window.onload = () => {
         ruta = 'orders'
       })
   }
+}
 
+window.onload = () => {
+  renderApp()
   // inicializaFormulario()
   // inicializaDatos()
 }

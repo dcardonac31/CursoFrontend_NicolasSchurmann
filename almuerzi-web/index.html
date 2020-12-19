@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto&family=Source+Sans+Pro&display=swap"
-  rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet">
   <title>Almuerzi web</title>
   <link rel="stylesheet" href="main.css" type="text/css" />
 </head>
+
 <body>
-  <div class="form-main">
-    <p class="form-tittle">Inicia sesión</p>
-    <form id="login-form" class="login-form">
-      <div>
-        <p>Email</p>      
-        <input id="email" placeholder="Nombre de usuario"/>
-      </div>
-      <div>
-        <p>Contraseña</p>
-        <input type="password" id="password" placeholder="Contraseña"/>
-      </div>
-      <div>
-        <button class="btn block">
-          Enviar
-        </button>
-      </div>
-    </form>
-  </div>
+  <template id="login-template">
+    <div class="form-main">
+      <p class="form-tittle">Inicia sesión</p>
+      <form id="login-form" class="login-form">
+        <div>
+          <p>Email</p>
+          <input id="email" placeholder="Nombre de usuario" />
+        </div>
+        <div>
+          <p>Contraseña</p>
+          <input type="password" id="password" placeholder="Contraseña" />
+        </div>
+        <div>
+          <button class="btn block">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </template>
   <template id="orders-view">
     <div id="meals">
       <ul id="meals-list">
@@ -45,4 +49,5 @@
   </template>
 </body>
 <script src="main.js"></script>
+
 </html>

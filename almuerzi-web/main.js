@@ -1,4 +1,5 @@
 let mealsState = []
+let ruta = 'login' //login, register, orders
 
 const stringToHTML = (s) => {
   const parser = new DOMParser()
@@ -87,6 +88,6 @@ const inicializaDatos = () => {
 }
 
 window.onload = () => {
-  inicializaFormulario()
-  inicializaDatos()
+  // inicializaFormulario()
+  // inicializaDatos()
 }
